@@ -12,15 +12,20 @@ import {
   Testimonials 
 } from './components'
 import styles from './style'
+import Hero1 from './components/Hero1'
+import Hero2 from './components/Hero2'
+import Portfolio from './components/Portfolio'
 
 const App = () => {
   return (
     <div className='bg-primary w-full overflow-hidden'>
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+      {/* <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Navbar/>
         </div>
-      </div>
+      </div> */}
+          <Navbar/>
+          <Hero1/>
+          <Portfolio/>
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <Hero/>      
