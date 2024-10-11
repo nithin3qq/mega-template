@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
 import logo1 from "../assets/mega/logo2.png";
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full fixed top-0 z-50 flex py-6 px-4 sm:px-8 justify-between items-center navbar bg-black bg-opacity-95 md:px-16 md:py-4">
+    <nav className="w-full fixed top-0 z-50 flex py-6 px-4 sm:px-8 justify-between items-center navbar bg-black bg-opacity-95 md:px-16 md:py-4 ">
       {/* Logo Section */}
       <div className="flex justify-start">
-        <img src={logo1} alt="hoobank" className="w-[184px] h-[50px]" />
+        <img src={logo1} alt="MG Technologies" className="w-[184px] h-[50px]" />
       </div>
 
       {/* Navigation Links and Button */}
@@ -23,16 +24,18 @@ const Navbar = () => {
                 i === navLinks.length - 1 ? "mr-0" : "mr-10"
               } text-white`}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <Link to={nav.link}>{nav.title}</Link> {/* Use Link for navigation */}
             </li>
           ))}
         </ul>
       </div>
 
       {/* Get a Quote Button - Centered on Mobile */}
-      <button className="bg-primary-19 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg font-poppins font-medium ml-0 sm:ml-6 mx-auto sm:mx-0 hover:bg-brown-200">
-        Get a Quote
-      </button>
+      <Link to="/getaquote"> {/* Link for Get a Quote */}
+        <button className="bg-primary-19 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg font-poppins font-medium ml-0 sm:ml-6 mx-auto sm:mx-0 hover:bg-brown-200">
+          Get a Quote
+        </button>
+      </Link>
 
       {/* Mobile Menu */}
       <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -55,7 +58,7 @@ const Navbar = () => {
                   i === navLinks.length - 1 ? "mr-0" : "mb-4"
                 } text-white`}
               >
-                <a href={`#${nav.id}`}>{nav.title}</a>
+                <Link to={nav.link}>{nav.title}</Link> {/* Use Link for navigation */}
               </li>
             ))}
           </ul>

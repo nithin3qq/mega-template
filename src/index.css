@@ -191,3 +191,41 @@
 .site-title span {
   color: #264bbc
 }
+
+/* Shuffle animation keyframes for card effect */
+.shuffle-card {
+  animation: shuffle-cards 0.7s ease-in-out;
+}
+
+@keyframes shuffle-cards {
+  0% {
+    transform: rotateX(360deg) rotateY(50deg) translateX(0px) translateY(0px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(0deg) translateX(0px) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Additional styling for headings */
+.site-title-tagline {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1E3A8A; /* Dark blue */
+}
+
+.site-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #1E3A8A;
+}
+
+.site-title span {
+  color: #3B82F6; /* Light blue */
+}
+
+/* Increased height for images */
+img {
+  height: 25rem; /* 80px height for images */
+}

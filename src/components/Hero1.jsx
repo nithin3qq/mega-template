@@ -4,28 +4,32 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Import Aut
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 // Import FontAwesome components
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowLeft, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
-
 // Import images for the carousel
-import image1 from "../assets/mega/hero1-img.jpg"; // Adjust to your actual images
-import image2 from "../assets/mega/hero1-img.jpg";
+import image1 from "../assets/mega/slide1.png"; 
+import image2 from "../assets/mega/slide2.png";
 import image3 from "../assets/mega/hero1-img.jpg";
+import Business from "./Business";
+import Testimonials from "./Testimonials";
+import CTA from "./CTA";
+import styles from "../style";
+import Features from "./Features";
+import About from "./About";
 
 const slidesContent = [
   {
     title: "We Offer Smart Security Systems For You",
     subtitle: "We Are Skilled & Expert",
     description: "Discover advanced security solutions tailored for your needs.",
-    image: 'https://live.themewild.com/secure/assets/img/slider/slider-1.jpg',
+    image: image1,
   },
   {
     title: "Protect What Matters Most",
     subtitle: "Your Security is Our Priority",
     description: "Our systems are designed to give you peace of mind.",
-    image: 'https://live.themewild.com/secure/assets/img/slider/slider-2.jpg',
+    image: image2,
   },
   {
     title: "Innovative Technology for Safety",
@@ -48,7 +52,8 @@ const Hero1 = () => {
   };
 
   return (
-    <div className="relative sm:w-full sm:h-[90vh] w-90 h-[80vh] overflow-hidden sm:mt-20 mt-0">
+    <div>
+    <div className="relative sm:w-full sm:h-[90vh] w-90 h-[90vh] overflow-hidden sm:mt-20 mt-0">
       {/* Swiper Carousel */}
       <Swiper
         ref={swiperRef} // Attach the ref to Swiper
@@ -106,6 +111,17 @@ const Hero1 = () => {
         >
           <FontAwesomeIcon icon={faCircleArrowRight} className="text-blue-500" style={{ fontSize: '50px' }} />
         </button>
+      </div>
+      
+    </div>
+    <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+        <Features/>
+        <About/>
+          <Business/>
+          <Testimonials/>
+          {/* <CTA/> */}
+          </div>
       </div>
     </div>
   );

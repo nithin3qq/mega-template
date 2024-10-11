@@ -19,73 +19,78 @@ export const navLinks = [
   {
     id: "home",
     title: "Home",
+    link: "/", // Link to Home page
   },
   {
     id: "about",
     title: "About",
+    link: "/about", // Link to About page
   },
-  {
-    id: "product",
-    title: "Product",
-  },
-  {
-    id: "clients",
-    title: "Clients",
-  },
+  
+  
   {
     id: "contact",
     title: "Contact",
+    link: "/contact", // Link to Contact page
   },
+  {
+    id: "portfolio",
+    title: "Portfolio",
+    link: "/portfolio", // Link to Portfolio page
+  },
+ 
 ];
+
 
 export const features = [
   {
     id: "feature-1",
     icon: star,
-    title: "Rewards",
+    title: "Advanced Surveillance",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+      "Our state-of-the-art surveillance systems provide comprehensive monitoring, ensuring round-the-clock security for your premises.",
   },
   {
     id: "feature-2",
     icon: shield,
     title: "100% Secured",
     content:
-      "We take proactive steps make sure your information and transactions are secure.",
+      "We implement advanced encryption and security protocols to ensure your systems and data remain protected at all times.",
   },
   {
     id: "feature-3",
     icon: send,
-    title: "Balance Transfer",
+    title: "Remote Monitoring",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "With our remote monitoring solutions, you can access and control your security systems from anywhere, providing real-time updates and peace of mind.",
   },
 ];
+
 
 export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-    name: "Herman Jensen",
-    title: "Founder & Leader",
-    img: people01,
+      "The security solutions provided by Mega Technologies transformed our business operations. Their team is professional and responsive.",
+    name: "Rahul Sharma",
+    title: "Business Owner, Tech Innovations",
+    img: 'https://thumb.ac-illust.com/33/33379f4342b6b3678554007c66977d5d_t.jpeg',
   },
   {
     id: "feedback-2",
     content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Steve Mark",
-    title: "Founder & Leader",
-    img: people02,
+      "I was impressed by the quick implementation of their security systems. Mega Technologies truly cares about their clients.",
+    name: "Priya Verma",
+    title: "Manager, Secure Solutions Pvt. Ltd.",
+    img: 'https://thumb.ac-illust.com/33/33379f4342b6b3678554007c66977d5d_t.jpeg',
   },
   {
     id: "feedback-3",
     content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
-    name: "Kenn Gallagher",
-    title: "Founder & Leader",
-    img: people03,
+      "Mega Technologies has set a new standard in security. Their products are reliable and easy to use.",
+    name: "Amit Singh",
+    title: "CTO, Digital Shield",
+    img: 'https://thumb.ac-illust.com/33/33379f4342b6b3678554007c66977d5d_t.jpeg',
   },
 ];
 
@@ -109,69 +114,50 @@ export const stats = [
 
 export const footerLinks = [
   {
-    title: "Useful Links",
+    title: "Company",
     links: [
       {
-        name: "Content",
-        link: "https://www.hoobank.com/content/",
+        name: "About Us",
+        link: "/about", // Assuming you have an About page
       },
       {
-        name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
+        name: "Services",
+        link: "/services", // Assuming you have a Services page
       },
       {
-        name: "Create",
-        link: "https://www.hoobank.com/create/",
-      },
-      {
-        name: "Explore",
-        link: "https://www.hoobank.com/explore/",
-      },
-      {
-        name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
+        name: "Contact Us",
+        link: "/contact", // Assuming you have a Contact page
       },
     ],
   },
   {
-    title: "Community",
+    title: "Support",
     links: [
       {
         name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
+        link: "/help", // Assuming you have a Help Center page
       },
       {
-        name: "Partners",
-        link: "https://www.hoobank.com/partners/",
-      },
-      {
-        name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
-      },
-      {
-        name: "Blog",
-        link: "https://www.hoobank.com/blog/",
-      },
-      {
-        name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
+        name: "FAQs",
+        link: "/faqs", // Assuming you have an FAQs page
       },
     ],
   },
   {
-    title: "Partner",
+    title: "Legal",
     links: [
       {
-        name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
+        name: "Privacy Policy",
+        link: "/privacy-policy", // Assuming you have a Privacy Policy page
       },
       {
-        name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
+        name: "Terms of Service",
+        link: "/terms", // Assuming you have a Terms of Service page
       },
     ],
   },
 ];
+
 
 export const socialMedia = [
   {

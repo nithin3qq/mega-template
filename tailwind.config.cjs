@@ -10,6 +10,15 @@ module.exports = {
         dimWhite: "rgba(255, 255, 255, 0.7)",
         dimBlue: "rgba(9, 151, 124, 0.1)",
       },
+      keyframes: {
+        fall: {
+          '0%': { transform: 'translateY(-50px)', opacity: 0 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
+        },
+      },
+      animation: {
+        fall: 'fall 0.8s ease-out forwards',
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
