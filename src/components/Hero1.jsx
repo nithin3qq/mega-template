@@ -17,6 +17,8 @@ import CTA from "./CTA";
 import styles from "../style";
 import Features from "./Features";
 import About from "./About";
+import Services from "./Services";
+import WhyChooseUs from "./WhyChooseUs";
 
 const slidesContent = [
   {
@@ -116,8 +118,9 @@ const Hero1 = () => {
     </div>
     <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
+        <Services/>
         <Features/>
-        <About/>
+        <WhyChooseUs/>
           <Business/>
           <Testimonials/>
           {/* <CTA/> */}

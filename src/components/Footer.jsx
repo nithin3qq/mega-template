@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../style';
 import { logo } from '../assets';
 import { footerLinks, socialMedia } from '../constants';
-import logo1 from "../assets/mega/logo2.png";
+import logo1 from "../assets/mega/logo.png";
 
 const Footer = () => {
   return (

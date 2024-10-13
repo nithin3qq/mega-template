@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { FaCheckCircle, FaHeadset, FaArrowRight } from 'react-icons/fa';
 import shape from '../assets/mega/01.svg';
+import Hero2 from './Hero2';
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -17,6 +18,8 @@ const About = () => {
   }, [inView]);
 
   return (
+    <div>
+      <Hero2/>
     <div className="container mx-auto py-16" ref={ref}>
       <div className="flex flex-col lg:flex-row items-center relative">
         {/* Left Section: Image */}
@@ -88,6 +91,7 @@ const About = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

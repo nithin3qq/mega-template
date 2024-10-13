@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
-import logo1 from "../assets/mega/logo2.png";
+import logo1 from "../assets/mega/logo.png";
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Navbar = () => {
@@ -32,7 +32,7 @@ const Navbar = () => {
 
       {/* Get a Quote Button - Centered on Mobile */}
       <Link to="/getaquote"> {/* Link for Get a Quote */}
-        <button className="bg-primary-19 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg font-poppins font-medium ml-0 sm:ml-6 mx-auto sm:mx-0 hover:bg-brown-200">
+        <button className="bg-primary-19 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-poppins font-medium ml-0 sm:ml-6 mx-auto sm:mx-0 hover:bg-brown-200">
           Get a Quote
         </button>
       </Link>

@@ -1,25 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { 
-  Billing, 
-  Business, 
-  CardDeal, 
-  Clients, 
-  CTA, 
-  Footer, 
-  Stats, 
-  Testimonials 
-} from './components';
+import { Footer} from './components';
 import styles from './style';
 import Hero1 from './components/Hero1';
 import Portfolio from './components/Portfolio';
 import GetAQuote from './components/GetAQuote';
 import Navbar from './components/Navbar';
 import About from './components/About';
+import ScrollToTop from './components/ScrollToTop';  // Import the ScrollToTop component
+
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />  {/* Use ScrollToTop here */}
       <div className='bg-primary w-full overflow-hidden'>
         <Navbar />
         <div className='mt-20'>

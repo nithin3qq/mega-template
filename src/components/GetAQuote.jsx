@@ -91,7 +91,6 @@ const GetAQuote = () => {
         <form onSubmit={sendEmail} id="quoteForm">
           <div className="w-full bg-white p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
             <h1 className="font-bold text-center lg:text-left text-blue-900 uppercase text-4xl">Get a Quote</h1>
-
             <div className="flex items-center my-4">
               <input 
                 type="checkbox" 

@@ -5,9 +5,9 @@ import GetStarted from "./GetStarted";
 
 const Hero2 = () => {
   return (
-    <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY} mt-10`}>
+    <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY} mt-0 px-20 mx-auto`}>
       <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
-        <h1 className="font-poppins font-bold text-white text-[52px] ss:text-[72px] leading-[75px] ss:leading-[100.8px] mb-5">
+        <h1 className="font-poppins font-bold text-white text-[52px] ss:text-[52px] leading-[75px] ss:leading-[100.8px] mb-5">
           Mega Technologies
         </h1>
         <p className={`${styles.paragraph} max-w-[470px] mt-5 text-gray-300`}>
@@ -25,7 +25,7 @@ const Hero2 = () => {
         <img
           src={shield} // Change this to a relevant image that represents security
           alt="Security Systems"
-          className="w-[90%] h-[90%] relative z-[5] object-cover rounded-md shadow-lg"
+          className="w-[80%] h-[90%] relative z-[5] object-cover rounded-md shadow-lg"
         />
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
         <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40" />
