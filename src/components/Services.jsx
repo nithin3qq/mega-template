@@ -71,9 +71,9 @@ const Services = () => {
               </a>
             </div>
             {/* Overlay */}
-            <div className="overlay bg-black bg-opacity-60 absolute inset-0 z-0 group-hover:bg-opacity-0 transition-all duration-300"></div>
+            <div className="overlay bg-black bg-opacity-20 absolute inset-0 z-0 group-hover:bg-opacity-0 transition-all duration-300"></div>
             {/* Hover Text */}
-            <div className="absolute bottom-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute bottom-4 right-4 text-white opacity-0 text-bold group-hover:opacity-100 transition-opacity duration-300">
               <span>Click to know more</span>
             </div>
           </div>

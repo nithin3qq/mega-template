@@ -9,7 +9,6 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import ScrollToTop from './components/ScrollToTop';  // Import the ScrollToTop component
 
-
 const App = () => {
   return (
     <Router>

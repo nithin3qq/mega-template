@@ -19,6 +19,7 @@ import Features from "./Features";
 import About from "./About";
 import Services from "./Services";
 import WhyChooseUs from "./WhyChooseUs";
+import Brands from "./Brands";
 
 const slidesContent = [
   {
@@ -119,12 +120,16 @@ const Hero1 = () => {
     <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
         <Services/>
+        </div>
+      </div>
+    <Brands/>
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
         <Features/>
         <WhyChooseUs/>
           <Business/>
           <Testimonials/>
-          {/* <CTA/> */}
-          </div>
+        </div>
       </div>
     </div>
   );

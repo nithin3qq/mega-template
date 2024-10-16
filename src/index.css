@@ -4,6 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --black-gradient: linear-gradient(
     144.39deg,
@@ -16,6 +17,7 @@
 
 * {
   scroll-behavior: smooth;
+  /* font-family : 'font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px]'; */
 }
 
 .text-gradient {
