@@ -29,7 +29,7 @@ const Footer = () => {
             <div className='flex items-center mb-4'>
               <AiOutlineMail className='mr-2 text-[20px] text-blue-500' /> {/* Email Icon */}
               <p className='font-poppins text-[16px] leading-[24px] text-dimWhite hover:text-blue-500 cursor-pointer'>
-                info.mgthyd@gmail.com
+                info@megatechnologies.in
               </p>
             </div>
             <div className='flex items-center mb-4'>

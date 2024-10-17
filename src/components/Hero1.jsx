@@ -8,8 +8,8 @@ import "swiper/css/pagination";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowLeft, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
 // Import images for the carousel
-import image1 from "../assets/mega/slide1.png"; 
-import image2 from "../assets/mega/slide2.png";
+import image1 from "../assets/mega/slide1-min.png"; 
+import image2 from "../assets/mega/slide2-min.png";
 import image3 from "../assets/mega/hero1-img.jpg";
 import Business from "./Business";
 import Testimonials from "./Testimonials";

@@ -20,16 +20,16 @@ const Product = () => {
   console.log('Product ID:', id);
   const portfolioItems = [
     { id: 1, title: 'Biometric', image: id1, description: 'Secure access with advanced biometric systems.', features: ['High accuracy', 'Fast recognition', 'Easy integration'], specifications: ['Operating Temp: -10°C to 50°C', 'Power Supply: 12V DC'] },
-    { id: 2, title: 'CCTV', image: id2, description: 'Advanced surveillance with cutting-edge CCTV technology', features: ['HD video quality', 'Night vision', 'Remote access'], specifications: ['Resolution: 1080p', 'Storage: 1TB HDD'] },
+    { id: 2, title: 'CCTV', image: id2, description: 'Advanced surveillance with cutting-edge CCTV technology', features: ['UHD video quality', 'Night vision', 'Remote access'], specifications: ['Resolution: 4k', 'Cloud Storage'] },
     { id: 3, title: 'Networking Data Center', image: id3, description: 'Efficient data centers for seamless connectivity.', features: ['Scalable architecture', 'High availability', 'Robust security'], specifications: ['Cooling: Redundant systems', 'Power: Dual feeds'] },
     { id: 4, title: 'Access Control System', image: id4, description: 'Monitor and control access with our solutions.', features: ['Real-time monitoring', 'Multiple authentication methods'], specifications: ['Compatibility: RFID, biometrics'] },
     { id: 5, title: 'Boom Barrier', image: id5, description: 'Advanced boom barrier systems for security.', features: ['Durable construction', 'Automatic operation'], specifications: ['Opening Speed: 1.5s', 'Length: Up to 6m'] },
-    { id: 6, title: 'Network Server', image: id6, description: 'Powerful servers to support your network infrastructure.', features: ['High performance', 'Energy efficient'], specifications: ['Processor: Intel Xeon', 'Memory: 32GB'] },
+    { id: 6, title: 'Network Server', image: id6, description: 'Powerful servers to support your network infrastructure.', features: ['High performance', 'Energy efficient'], specifications: ['10G speed', 'Structure Cabling'] },
     { id: 7, title: 'Epabx', image: id7, description: 'Effective communication systems for businesses.', features: ['Multiple lines', 'Voicemail functionality'], specifications: ['Capacity: Up to 100 users'] },
     { id: 8, title: 'Fire Alarm System', image: id8, description: 'Reliable fire alarm systems for safety.', features: ['Smoke detection', 'Alert systems'], specifications: ['Power: 24V DC', 'Battery backup'] },
     { id: 9, title: 'Solar Power', image: id9, description: 'Eco-friendly solar power solutions.', features: ['Sustainable energy', 'Cost-efficient'], specifications: ['Panel Type: Monocrystalline', 'Output: 300W'] },
     { id: 10, title: 'Digital Door Lock', image: id10, description: 'Smart locking systems for modern homes.', features: ['Keyless entry', 'Remote control'], specifications: ['Power: 4 x AA batteries', 'Connectivity: Bluetooth'] },
-    { id: 11, title: 'Video Door Phone', image: id11, description: 'Video door phones for added security.', features: ['Two-way communication', 'Wide-angle lens'], specifications: ['Resolution: 720p', 'Power: 12V'] },
+    { id: 11, title: 'Video Door Phone', image: id11, description: 'Video door phones for added security.', features: ['Two-way communication', 'Wide-angle lens'], specifications: ['HD quality', 'Remote Acccess'] },,
     { id: 12, title: 'Wireless Internet', image: id12, description: 'Reliable and fast wireless internet solutions.', features: ['High-speed connection', 'Wide coverage'], specifications: ['Speed: Up to 1Gbps', 'Range: 300m'] },
     { id: 13, title: 'Complete Home Network', image: id13, description: 'Complete networking solutions for homes.', features: ['Seamless connectivity', 'Easy setup'], specifications: ['Router: Dual-band', 'Mesh support'] },
   ];

@@ -154,7 +154,7 @@
 
 
 /* nithin */
-@keyframes fall {
+@keyframes falls {
   0% {
     transform: translateY(-100%);
     opacity: 0;
@@ -166,7 +166,7 @@
 }
 
 @media (max-width: 768px) {
-  @keyframes fall {
+  @keyframes falls {
     0% {
       transform: translateY(-100%);
       opacity: 0;
@@ -179,7 +179,7 @@
 }
 
 .fall-animation {
-  animation: fall 0.5s ease forwards;
+  animation: falls 0.5s ease forwards;
 }
 
 

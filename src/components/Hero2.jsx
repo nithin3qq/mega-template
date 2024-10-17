@@ -27,19 +27,19 @@ const Hero2 = () => {
       {/* Right Section */}
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
         <img
-          src='https://live.themewild.com/secure/assets/img/slider/01.png' // Change this to a relevant image that represents security
+          src='https://rajabandsilsilah.com/wp-content/uploads/2020/08/12.1-2048x1319.jpg' // Change this to a relevant image that represents security
           alt="Security Systems"
           className="w-full h-auto md:h-[100%] object-cover rounded-md shadow-lg"
         />
-        <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
+        {/* <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" /> */}
         <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40" />
         <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient" />
       </div>
 
       {/* Mobile Get Started Button */}
-      <div className={`md:hidden ${styles.flexCenter}`}>
+      {/* <div className={`md:hidden ${styles.flexCenter}`}>
         <GetStarted />
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -18,7 +18,6 @@ const Features = () => {
   return (
     <div className="container mx-auto py-20 m-20 p-10 sm:p-0" ref={ref}>
       <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 transition-opacity duration-1000 ease-in-out ${visible ? 'opacity-100' : 'opacity-0'}`}>
-        
         {/* Experts Staff */}
         <div className="feature-item text-center p-6 bg-white shadow-lg rounded-lg hover:scale-105 transition-transform duration-300">
           <div className="flex justify-center items-center mb-4">
@@ -31,7 +30,6 @@ const Features = () => {
             Our team of highly trained professionals ensures that your security systems are installed and maintained to the highest standards.
           </p>
         </div>
-        
         {/* Different Range */}
         <div className="feature-item text-center p-6 bg-white shadow-lg rounded-lg hover:scale-105 transition-transform duration-300">
           <div className="flex justify-center items-center mb-4">

@@ -4,6 +4,7 @@ import { FaCheckCircle, FaHeadset, FaArrowRight } from 'react-icons/fa';
 import shape from '../assets/mega/01.svg';
 import Hero2 from './Hero2';
 import { Link } from 'react-router-dom';
+import Features from './Features';
 
 const About = () => {
   const { ref, inView } = useInView({

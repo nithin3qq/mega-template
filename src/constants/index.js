@@ -137,6 +137,14 @@ export const footerLinks = [
         link: "/portfolio", // Assuming you have a Help Center page
       },
       {
+        name: "Networking",
+        link: "/portfolio", // Assuming you have an portfolio page
+      },
+      {
+        name: "Solar Power",
+        link: "/portfolio", // Assuming you have an FAQs page
+      },
+      {
         name: "Access Control Systems",
         link: "/portfolio", // Assuming you have an portfolio page
       },

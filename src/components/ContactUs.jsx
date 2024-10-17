@@ -51,9 +51,9 @@ const ContactUs = () => {
   return (
     <div className="bg-gray-50" ref={ref}>
       {/* Google Map Section */}
-      <section className="w-full">
+      {/* <section className="w-full">
         <iframe
-        //   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.0677082005723!2d39.2819771!3d-6.7615988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4c157c175805%3A0xf78d233cac824cef!2sSecure%207%20System%20Limited!5e0!3m2!1sen!2stz!4v1665389177643!5m2!1sen!2stz" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.0677082005723!2d39.2819771!3d-6.7615988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4c157c175805%3A0xf78d233cac824cef!2sSecure%207%20System%20Limited!5e0!3m2!1sen!2stz!4v1665389177643!5m2!1sen!2stz" 
           src="https://www.google.com/maps/embed" 
           width="100%"
           height="400"
@@ -61,7 +61,7 @@ const ContactUs = () => {
           allowFullScreen=""
           loading="lazy"
         ></iframe>
-      </section>
+      </section> */}
       
       {/* Contact Form Section */}
       <section className="container mx-auto px-4 mt-10 p-10 border border-gray-300 rounded-lg shadow-lg">
@@ -72,7 +72,7 @@ const ContactUs = () => {
             <h4 className="text-4xl font-bold relative z-10 my-10 underline">MEGA Technologies</h4>
             <h4 className="text-3xl font-bold relative z-10">Tailored Solutions For Your Security</h4>
             <p className="my-4 relative z-10">
-              At MG Technologies, we prioritize your security. Reach out to us for customized solutions designed to meet your specific needs.
+              At MEGA Technologies, we prioritize your security. Reach out to us for customized solutions designed to meet your specific needs.
             </p>
             <ul className="mt-6 relative z-10">
               <li className="mb-2 flex items-center">
