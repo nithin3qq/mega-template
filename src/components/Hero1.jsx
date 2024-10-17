@@ -64,7 +64,7 @@ const Hero1 = () => {
         spaceBetween={0}
         slidesPerView={1}
         loop={true}
-        autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay settings
+        autoplay={{ delay: 190000, disableOnInteraction: false }} // Autoplay settings
         className="w-full h-full"
         onSlideChange={handleSlideChange} // Trigger on slide change
       >

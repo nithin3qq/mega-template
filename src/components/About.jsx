@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { FaCheckCircle, FaHeadset, FaArrowRight } from 'react-icons/fa';
 import shape from '../assets/mega/01.svg';
 import Hero2 from './Hero2';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -75,10 +76,9 @@ const About = () => {
           </ul>
 
           <div className="flex items-center justify-between">
-            <a href="about.html" className="bg-blue-400 text-white py-3 px-6 rounded-lg inline-flex items-center">
-              Read More <FaArrowRight className="ml-2" />
-            </a>
-
+          <Link to={`/portfilio`} className="bg-blue-400 text-white py-3 px-6 rounded-lg inline-flex items-center">
+          Read More <FaArrowRight className="ml-2" />
+                </Link>
             <div className="flex items-center">
               <FaHeadset className="text-blue-400 text-3xl mr-4" />
               <div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import { FiFileText } from 'react-icons/fi'; // Icon for Get a Quote
 import id1 from '../assets/mega/portfolio/biometric.jpeg';
 import id2 from '../assets/mega/portfolio/cctv.jpg';
 import id3 from '../assets/mega/portfolio/network_data_center.jpeg';
@@ -13,6 +14,7 @@ import id10 from '../assets/mega/portfolio/digital-door-lock.jpeg';
 import id11 from '../assets/mega/portfolio/video-door-phone.jpeg';
 import id12 from '../assets/mega/portfolio/wireless-internet.jpeg';
 import id13 from '../assets/mega/portfolio/complete-home-network.jpeg';
+import { Link } from 'react-router-dom';
 
 const servicesItems = [
   { id: 1, title: 'Biometric', image: id1, description: 'Secure access with advanced biometric systems.' },
@@ -36,45 +38,51 @@ const Services = () => {
       {/* Header */}
       <div className="text-center">
         <div className="my-4">
-          <span className="site-title-tagline">Our Services</span>
+          <span className="site-title-tagline text-blue-500">Our Services</span>
         </div>
         <div className="heading-divider my-6"></div>
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {servicesItems.map((service, index) => (
           <div
             key={service.id}
-            className="service-item group p-9 py-20 bg-cover bg-center rounded-lg shadow-lg relative transition duration-300 ease-in-out transform hover:scale-105"
-            style={{ backgroundImage: `url(${service.image})` }}
-            data-wow-duration="1s"
-            data-wow-delay={`${index * 0.25}s`}
+            className="service-item group p-4 bg-gradient-to-b from-gray-800 to-black shadow-lg border border-gray-700 rounded-lg transition-all duration-300 hover:scale-105"
           >
-            {/* Service Number */}
-            <span className="service-count absolute top-2 left-4 text-4xl font-bold text-gray-100">{String(index + 1).padStart(2, '0')}</span>
+            {/* Service Image */}
+            <div
+              className="w-full h-64 bg-cover bg-center rounded-t-lg transition-all duration-300 group-hover:opacity-80"
+              style={{ backgroundImage: `url(${service.image})` }}
+            ></div>
 
             {/* Service Content */}
-            <div className="service-content text-white py-4 relative z-10 top-14 left-0 transition-all duration-300 group-hover:opacity-0">
-              <h3 className="service-title text-2xl font-bold mb-2">
-                <a href="#">{service.title}</a>
+            <div className="service-content text-center py-4">
+              {/* Service Title */}
+              <h3 className="service-title text-2xl font-bold mb-2 text-white">
+                <Link to={`/products/${service.id}`} className="hover:underline">
+                  {service.title}
+                </Link>
               </h3>
-              <p className="service-text mb-4">{service.description}</p>
-            </div>
-            {/* "Read More" Button */}
-            <div className="service-arrow absolute bottom-4 left-8 z-10">
-              <a
-                href="#"
-                className="bg-blue-500 text-white text-sm px-4 py-2 rounded-lg flex items-center border border-transparent hover:border-white transition-all duration-300"
-              >
-                <FaArrowRight className="mr-2" /> <span>Read More</span>
-              </a>
-            </div>
-            {/* Overlay */}
-            <div className="overlay bg-black bg-opacity-20 absolute inset-0 z-0 group-hover:bg-opacity-0 transition-all duration-300"></div>
-            {/* Hover Text */}
-            <div className="absolute bottom-4 right-4 text-white opacity-0 text-bold group-hover:opacity-100 transition-opacity duration-300">
-              <span>Click to know more</span>
+              {/* Service Description */}
+              <p className="service-text text-gray-400 mb-4">{service.description}</p>
+
+              {/* Buttons Inline */}
+              <div className="flex justify-center space-x-4">
+                {/* "Read More" Button */}
+                <Link to={`/products/${service.id}`}>
+                  <button className="service-arrow bg-blue-500 text-white text-sm px-4 py-2 rounded-lg flex items-center border border-transparent hover:border-white transition-all duration-300">
+                    <FaArrowRight className="mr-2" /> <span>Read More</span>
+                  </button>
+                </Link>
+
+                {/* "Get a Quote" Button */}
+                <Link to={`/getaquote`}>
+                  <button className="service-quote bg-yellow-500 text-white text-sm px-4 py-2 rounded-lg flex items-center border border-transparent hover:border-white transition-all duration-300">
+                    <FiFileText className="mr-2" /> <span>Get a Quote</span>
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         ))}
@@ -82,4 +90,5 @@ const Services = () => {
     </div>
   );
 };
+
 export default Services;

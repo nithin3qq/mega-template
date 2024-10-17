@@ -15,9 +15,19 @@ module.exports = {
           '0%': { transform: 'translateY(-50px)', opacity: 0 },
           '100%': { transform: 'translateY(0)', opacity: 1 },
         },
+        'fall-left': {
+          '0%': { transform: 'translateX(-100px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        'fall-right': {
+          '0%': { transform: 'translateX(100px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
       },
       animation: {
         fall: 'fall 0.8s ease-out forwards',
+        'fall-left': 'fall-left 1s ease-out forwards',
+        'fall-right': 'fall-right 1s ease-out forwards',
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

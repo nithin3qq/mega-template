@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { Link } from 'react-router-dom';
+import { FaChevronRight } from 'react-icons/fa';
 
 const GetAQuote = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +14,7 @@ const GetAQuote = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   // Handle form field changes
   const handleChange = (e) => {
@@ -23,17 +26,12 @@ const GetAQuote = () => {
   // Handle checkbox change
   const handleCheckboxChange = (e) => {
     const { value, checked } = e.target;
-    if (checked) {
-      setFormData((prevState) => ({
-        ...prevState,
-        products: [...prevState.products, value],
-      }));
-    } else {
-      setFormData((prevState) => ({
-        ...prevState,
-        products: prevState.products.filter((product) => product !== value),
-      }));
-    }
+    setFormData((prevState) => ({
+      ...prevState,
+      products: checked
+        ? [...prevState.products, value]
+        : prevState.products.filter((product) => product !== value),
+    }));
   };
 
   // Clear errors
@@ -41,34 +39,36 @@ const GetAQuote = () => {
     setErrors({});
   };
 
+  // Validate form inputs
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.firstName) newErrors.firstName = 'First Name is required';
+    if (!formData.lastName) newErrors.lastName = 'Last Name is required';
+    if (!formData.email) newErrors.email = 'Email is required';
+    if (!formData.phone) newErrors.phone = 'Phone number is required';
+    if (formData.products.length === 0) newErrors.products = 'At least one product must be selected';
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   // Handle form submission using emailjs
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSubmitted(false);
 
-    // Simple validation
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || formData.products.length === 0) {
-      setErrors({
-        firstName: !formData.firstName ? 'First Name is required' : '',
-        lastName: !formData.lastName ? 'Last Name is required' : '',
-        email: !formData.email ? 'Email is required' : '',
-        phone: !formData.phone ? 'Phone number is required' : '',
-        products: formData.products.length === 0 ? 'At least one product must be selected' : '',
-      });
-      return;
-    }
+    if (!validateForm()) return;
 
-    // Use emailjs to send form data
     emailjs
       .send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'service_py2ndtj', // Replace with your EmailJS service ID
+        'template_ugp7ii1', // Replace with your EmailJS template ID
         formData,
-        'YOUR_USER_ID' // Replace with your EmailJS user ID
+        'VtEcW5EnsU9TiHnDO' // Replace with your EmailJS user ID
       )
       .then(
-        (result) => {
-          console.log(result.text);
-          alert('Quote request sent successfully!');
+        () => {
+          setIsSubmitted(true);
           setFormData({
             firstName: '',
             lastName: '',
@@ -79,15 +79,23 @@ const GetAQuote = () => {
           });
         },
         (error) => {
-          console.log(error.text);
-          alert('Failed to send the request. Please try again later.');
+          setErrors({ submit: 'Failed to send the request. Please try again later.' });
+          console.error('EmailJS Error:', error.text);
         }
       );
   };
 
   return (
     <div id="get-quote" className="flex justify-center items-center w-full bg-white py-12 lg:pb-24">
+       
       <div className="container mx-auto px-4 lg:px-20">
+      <nav className="text-gray-400 mb-4">
+        <Link to="/" className="hover:underline text-blue-500">Home</Link>
+        {/* <FaChevronRight className="inline-block mx-2" /> */}
+        {/* <Link to="/portfolio" className="hover:underline text-blue-500">Portfolio</Link> */}
+        <FaChevronRight className="inline-block mx-2" />
+        <span className="text-gray-500">Get A Quote</span>
+      </nav>
         <form onSubmit={sendEmail} id="quoteForm">
           <div className="w-full bg-white p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
             <h1 className="font-bold text-center lg:text-left text-blue-900 uppercase text-4xl">Get a Quote</h1>
@@ -97,6 +105,7 @@ const GetAQuote = () => {
                 className="h-4 w-4 rounded" 
                 value="CCTV Systems" 
                 onChange={handleCheckboxChange} 
+                checked={formData.products.includes('CCTV Systems')}
               />
               <label className="ml-3 text-lg font-medium text-gray-900">CCTV Systems</label>
             </div>
@@ -107,6 +116,7 @@ const GetAQuote = () => {
                 className="h-4 w-4 rounded" 
                 value="Access Control" 
                 onChange={handleCheckboxChange} 
+                checked={formData.products.includes('Access Control')}
               />
               <label className="ml-3 text-lg font-medium text-gray-900">Access Control Systems</label>
             </div>
@@ -117,6 +127,7 @@ const GetAQuote = () => {
                 className="h-4 w-4 rounded" 
                 value="Alarm Systems" 
                 onChange={handleCheckboxChange} 
+                checked={formData.products.includes('Alarm Systems')}
               />
               <label className="ml-3 text-lg font-medium text-gray-900">Alarm Systems</label>
             </div>
@@ -127,6 +138,7 @@ const GetAQuote = () => {
                 className="h-4 w-4 rounded" 
                 value="Fire Safety Systems" 
                 onChange={handleCheckboxChange} 
+                checked={formData.products.includes('Fire Safety Systems')}
               />
               <label className="ml-3 text-lg font-medium text-gray-900">Fire Safety Systems</label>
             </div>
@@ -186,7 +198,7 @@ const GetAQuote = () => {
             <div className="my-4">
               <textarea 
                 name="message" 
-                placeholder="Message*" 
+                placeholder="Message" 
                 className="w-full h-32 bg-gray-100 mt-2 p-3 rounded-lg" 
                 value={formData.message} 
                 onChange={handleChange}
@@ -204,6 +216,10 @@ const GetAQuote = () => {
             </div>
           </div>
         </form>
+        {isSubmitted && (
+          <p className="text-green-600 mt-4">Your request has been sent successfully!</p>
+        )}
+        {errors.submit && <p className="text-red-600 mt-4">{errors.submit}</p>}
 
         {/* Office Info */}
         <div className="w-full lg:-mt-96 lg:w-2/6 px-8 py-6 ml-auto bg-blue-900 rounded-2xl">
@@ -229,5 +245,7 @@ const GetAQuote = () => {
         </div>
       </div>
     </div>
-  )}
-  export default GetAQuote;
+  );
+};
+
+export default GetAQuote;

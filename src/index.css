@@ -160,8 +160,21 @@
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(50%);
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes fall {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(10%);
+      opacity: 1;
+    }
   }
 }
 
@@ -176,7 +189,7 @@
   letter-spacing: 3px;
   font-size: 20px;
   font-weight: 700;
-  color: #2650bc;
+  color: #5c79f7 !important;
   position: relative;
   font-family: montserrat alternates,sans-serif
 }
@@ -231,3 +244,21 @@
 img {
   height: 25rem; /* 80px height for images */
 }
+
+/* Add this to your global CSS file */
+.loader {
+  border-color: transparent;
+  border-top-color: #6298f7; /* Change to your desired spinner color */
+}
+
+/* Optional: Customize the animation speed */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* If you're not using Tailwind's built-in spinning animation */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+

@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../style'
 import { arrowUp } from '../assets'
+import { Link } from 'react-router-dom'
 
 const GetStarted = () => {
   return (
@@ -17,7 +18,9 @@ const GetStarted = () => {
           />
         </div>
         <p className='font-poppins font-medium text-[18px] leading-[23px]'>
-          <span className='text-gradient'>Started</span>
+        <Link to={`/getaquote`} className="hover:underline">
+        <span className='text-gradient'>Started</span>
+          </Link>
         </p>
       </div>
     </div>

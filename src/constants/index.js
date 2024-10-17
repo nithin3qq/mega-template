@@ -22,22 +22,21 @@ export const navLinks = [
     link: "/", // Link to Home page
   },
   {
+    id: "portfolio",
+    title: "Portfolio",
+    link: "/portfolio", // Link to Portfolio page
+  },
+  {
     id: "about",
     title: "About",
     link: "/about", // Link to About page
   },
-  
-  
   {
     id: "contact",
     title: "Contact",
     link: "/contact", // Link to Contact page
   },
-  {
-    id: "portfolio",
-    title: "Portfolio",
-    link: "/portfolio", // Link to Portfolio page
-  },
+  
  
 ];
 
@@ -122,7 +121,7 @@ export const footerLinks = [
       },
       {
         name: "Services",
-        link: "/services", // Assuming you have a Services page
+        link: "/portfolio", // Assuming you have a Services page
       },
       {
         name: "Contact Us",
@@ -131,28 +130,23 @@ export const footerLinks = [
     ],
   },
   {
-    title: "Support",
+    title: "Solutions",
     links: [
       {
-        name: "Help Center",
-        link: "/help", // Assuming you have a Help Center page
+        name: "CCTV & Video",
+        link: "/portfolio", // Assuming you have a Help Center page
       },
       {
-        name: "FAQs",
-        link: "/faqs", // Assuming you have an FAQs page
-      },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      {
-        name: "Privacy Policy",
-        link: "/privacy-policy", // Assuming you have a Privacy Policy page
+        name: "Access Control Systems",
+        link: "/portfolio", // Assuming you have an portfolio page
       },
       {
-        name: "Terms of Service",
-        link: "/terms", // Assuming you have a Terms of Service page
+        name: "Alarm Systems",
+        link: "/portfolio", // Assuming you have an portfolio page
+      },
+      {
+        name: "Fire Safety Systems",
+        link: "/portfolio", // Assuming you have an FAQs page
       },
     ],
   },
