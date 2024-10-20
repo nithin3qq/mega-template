@@ -18,7 +18,6 @@ const Navbar = () => {
   useEffect(() => {
     // Add the scroll event listener
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       // Clean up the event listener
       window.removeEventListener("scroll", handleScroll);
@@ -52,18 +51,15 @@ const Navbar = () => {
               <span className="text-xl">  24 hours/7days *</span>
             </div>
           </div>
-
           {/* Right Side: Social Media Icons */}
           <div className="flex items-center space-x-3">
             <span className="text-xl">Follow Us:</span>
-            <a href="#" className="text-white"><FaFacebookF /></a>
+            <a href="https://www.facebook.com/share/7616CQHMkCnZoDJ1/" target="_blank" className="text-white"><FaFacebookF /></a>
             <a href="#" className="text-white"><FaTwitter /></a>
             <a href="#" className="text-white"><FaInstagram /></a>
           </div>
         </div>
       </div>
-
-      {/* Navbar Section */}
       <nav
         className={`w-full fixed z-50 flex py-6 px-4 sm:px-8 justify-between items-center navbar bg-black bg-opacity-95 md:px-16 md:py-4 transition-all duration-300 ${
           scrollPosition > 50 ? "top-0" : "sm:top-[50px] top-0"
@@ -73,7 +69,6 @@ const Navbar = () => {
         <div className="flex justify-start">
           <img src={logo1} alt="MG Technologies" className="w-[184px] h-[50px]" />
         </div>
-
         {/* Navigation Links */}
         <div className="flex justify-end items-center flex-1">
           <ul className="list-none sm:flex hidden justify-end items-center flex-1">
@@ -89,14 +84,12 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-
         {/* Get a Quote Button */}
         <Link to="/getaquote">
           <button className="bg-primary-19 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-poppins font-medium ml-0 sm:ml-6 mx-auto sm:mx-0 hover:bg-brown-200">
             Get a Quote
           </button>
         </Link>
-
         {/* Mobile Menu */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img

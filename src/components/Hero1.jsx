@@ -20,6 +20,8 @@ import About from "./About";
 import Services from "./Services";
 import WhyChooseUs from "./WhyChooseUs";
 import Brands from "./Brands";
+import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 
 const slidesContent = [
   {
@@ -84,12 +86,19 @@ const Hero1 = () => {
                     <h1 className="hero-title text-6xl font-bold text-white mb-4">{slide.title}</h1> {/* Increased size and added margin */}
                     <p className="text-gray-200 mt-4 text-lg">{slide.description}</p>
                     <div className="hero-btn mt-4">
-                      <a href="#" className="theme-btn bg-blue-500 text-white py-3 px-6 rounded-lg mr-2 text-lg transition-transform transform hover:scale-105">
+                      <Link to="/about" className="theme-btn bg-blue-500 text-white py-3 px-6 rounded-lg mr-2 text-lg transition-transform transform hover:scale-105">
+                      About More <i className="fas fa-arrow-right"></i>
+                      </Link>
+                      {/* <a href="#" className="theme-btn bg-blue-500 text-white py-3 px-6 rounded-lg mr-2 text-lg transition-transform transform hover:scale-105">
                         About More <i className="fas fa-arrow-right"></i>
-                      </a>
-                      <a href="#" className="theme-btn bg-white text-blue-500 py-3 px-6 rounded-lg text-lg transition-transform transform hover:scale-105">
+                      </a> */}
+                      <Link to='/portfolio' className="theme-btn bg-white text-blue-500 py-3 px-6 rounded-lg text-lg transition-transform transform hover:scale-105">
+                      Learn More
+                      {/* <FaArrowRight className="mr-2" /> */}
+                      </Link>
+                      {/* <a href="#" className="theme-btn bg-white text-blue-500 py-3 px-6 rounded-lg text-lg transition-transform transform hover:scale-105">
                         Learn More <i className="fas fa-arrow-right"></i>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
