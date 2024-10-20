@@ -5,6 +5,7 @@ import styles from './style';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop'; // Import the ScrollToTop component
 import Preloader from './components/Preloader'; // Preloader for suspense
+import NotFound from './components/NotFound';
 
 // Lazy load other components
 const Hero1 = lazy(() => import('./components/Hero1'));
@@ -42,6 +43,7 @@ const App = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/getaquote" element={<GetAQuote />} />
                 <Route path="/contact" element={<ContactUs />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
             <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>

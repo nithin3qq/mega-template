@@ -77,7 +77,7 @@ const About = () => {
           </ul>
 
           <div className="flex items-center justify-between">
-          <Link to={`/portfilio`} className="bg-blue-400 text-white py-3 px-6 rounded-lg inline-flex items-center">
+          <Link to={`/portfolio`} className="bg-blue-400 text-white py-3 px-6 rounded-lg inline-flex items-center">
           Read More <FaArrowRight className="ml-2" />
                 </Link>
             <div className="flex items-center">
