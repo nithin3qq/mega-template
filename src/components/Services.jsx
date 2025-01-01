@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight,FaQuoteRight  } from 'react-icons/fa';
 import { FiFileText } from 'react-icons/fi'; // Icon for Get a Quote
 import id1 from '../assets/mega/portfolio/biometric.jpeg';
 import id2 from '../assets/mega/portfolio/cctv.jpg';
@@ -15,6 +15,7 @@ import id11 from '../assets/mega/portfolio/video-door-phone.jpeg';
 import id12 from '../assets/mega/portfolio/wireless-internet.jpeg';
 import id13 from '../assets/mega/portfolio/complete-home-network.jpeg';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const servicesItems = [
   { id: 1, title: 'Biometric', image: id1, description: 'Secure access with advanced biometric systems.' },
@@ -34,57 +35,82 @@ const servicesItems = [
 
 const Services = () => {
   return (
-    <div className="container mx-auto mt-8">
-      {/* Header */}
-      <div className="text-center">
-        <div className="my-4">
-          <span className="site-title-tagline text-blue-500">Our Services</span>
-        </div>
-        <div className="heading-divider my-6"></div>
+    <div className="container mx-auto py-20">
+      {/* Enhanced Header */}
+      <div className="text-center mb-16">
+        <motion.span 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="inline-block text-blue-500 font-bold text-lg px-6 py-2 rounded-full bg-blue-500/10 mb-4"
+        >
+          Our Services
+        </motion.span>
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-4xl md:text-5xl font-bold text-white mb-6"
+        >
+          What We <span className="text-blue-500">Offer</span>
+        </motion.h2>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-gray-400 text-lg max-w-2xl mx-auto"
+        >
+          Discover our comprehensive range of security and networking solutions
+        </motion.p>
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {servicesItems.map((service, index) => (
-          <div
+          <motion.div
             key={service.id}
-            className="service-item group p-4 bg-gradient-to-b from-gray-800 to-black shadow-lg border border-gray-700 rounded-lg transition-all duration-300 hover:scale-105"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-gray-800 to-gray-900"
           >
-            {/* Service Image */}
-            <div
-              className="w-full h-64 bg-cover bg-center rounded-t-lg transition-all duration-300 group-hover:opacity-80"
-              style={{ backgroundImage: `url(${service.image})` }}
-            ></div>
+            {/* Image Container */}
+            <div className="relative h-64 overflow-hidden">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+            </div>
 
-            {/* Service Content */}
-            <div className="service-content text-center py-4">
-              {/* Service Title */}
-              <h3 className="service-title text-2xl font-bold mb-2 text-white">
-                <Link to={`/products/${service.id}`} className="hover:underline">
-                  {service.title}
-                </Link>
+            {/* Content */}
+            <div className="p-8 relative">
+              <div className="absolute top-0 right-0 -mt-12 mr-8 w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center transform -rotate-45 group-hover:rotate-0 transition-transform duration-300">
+                <FaQuoteRight className="text-white text-xl transform rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+              </div>
+
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
+                {service.title}
               </h3>
-              {/* Service Description */}
-              <p className="service-text text-gray-400 mb-4">{service.description}</p>
+              <p className="text-gray-400 mb-6 group-hover:text-gray-300 transition-colors duration-300">
+                {service.description}
+              </p>
 
-              {/* Buttons Inline */}
-              <div className="flex justify-center space-x-4">
-                {/* "Read More" Button */}
+              {/* Action Buttons */}
+              <div className="flex gap-4">
                 <Link to={`/products/${service.id}`}>
-                  <button className="service-arrow bg-blue-500 text-white text-sm px-4 py-2 rounded-lg flex items-center border border-transparent hover:border-white transition-all duration-300">
-                    <FaArrowRight className="mr-2" /> <span>Read More</span>
+                  <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-2 sm:px-4 py-3 rounded-xl transition-all duration-300 transform hover:translate-x-2">
+                    <span>Read More</span>
+                    <FaArrowRight />
                   </button>
                 </Link>
-
-                {/* "Get a Quote" Button */}
-                <Link to={`/getaquote`}>
-                  <button className="service-quote bg-yellow-500 text-white text-sm px-4 py-2 rounded-lg flex items-center border border-transparent hover:border-white transition-all duration-300">
-                    <FiFileText className="mr-2" /> <span>Get a Quote</span>
+                <Link to="/getaquote">
+                  <button className="flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-2 sm:px-4 py-3 rounded-xl transition-all duration-300 transform hover:translate-x-2">
+                    <FiFileText />
+                    <span>Get Quote</span>
                   </button>
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

@@ -7,6 +7,8 @@ const GetStarted = () => {
   return (
     <div className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}>
       <div className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] rounded-full`}>
+      <Link to={`/getaquote`} className="hover:underline">
+
         <div className={`${styles.flexStart} flex-row`}>
           <p className='font-poppins font-medium text-[18px] leading-[23px] mr-2'>
             <span className='text-gradient'>Get</span>
@@ -18,10 +20,11 @@ const GetStarted = () => {
           />
         </div>
         <p className='font-poppins font-medium text-[18px] leading-[23px]'>
-        <Link to={`/getaquote`} className="hover:underline">
+        
         <span className='text-gradient'>Started</span>
-          </Link>
         </p>
+        </Link>
+
       </div>
     </div>
   )

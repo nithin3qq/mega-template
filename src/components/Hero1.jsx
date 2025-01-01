@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowLeft, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
 import image1 from "../assets/mega/slide1.jpg"; 
-import image2 from "../assets/mega/slide2.jpg";
+import image2 from "../assets/mega/slide2.webp";
 import image3 from "../assets/mega/slide3.jpg";
 import Business from "./Business";
 import Testimonials from "./Testimonials";
@@ -22,7 +22,7 @@ import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 const slidesContent = [
   {
-    title: "We Offer Smart Security Systems For You",
+    title: "We Offer Smart Security Systems",
     subtitle: "We Are Skilled & Expert",
     description: "Discover advanced security solutions tailored for your needs.",
     image: image1,
@@ -93,7 +93,7 @@ const Hero1 = () => {
                       </div>
                         <Link 
                           to="/about" 
-                          className="theme-btn bg-blue-600 hover:bg-blue-700 text-white py-4 sm:py-4 px-8 sm:px-8 rounded-full text-md sm:text-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg flex items-center gap-2"
+                          className="theme-btn bg-blue-600 hover:bg-blue-700 text-white py-4 sm:py-4 px-4 sm:px-8 rounded-full text-md sm:text-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg flex items-center gap-2"
                         >
                           About More
                           <FaArrowRight className="ml-1 sm:ml-2 animate-bounce" />

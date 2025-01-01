@@ -22,10 +22,12 @@ const WhyChooseUs = () => {
           className={`md:w-1/2 transition duration-1000 ease-in-out ${textInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'} flex flex-col justify-center`}
         >
           <div className="wow fadeInUp text-center md:text-left">
-            <div className="mb-3">
-              <span className="text-secondary uppercase text-sm">Why Choose Us</span>
-              <h2 className="text-4xl font-bold text-white mt-2">
-                We Are Trusted <span className="text-primary">Security Systems</span> Provider
+          <div className="space-y-4 mb-10">
+              <span className="text-secondary uppercase text-sm tracking-wider font-semibold bg-blue-500/10 text-blue-500 px-4 py-2 rounded-full">
+                Why Choose Us
+              </span>
+              <h2 className="text-4xl font-bold text-white">
+                We Are Trusted <span className="text-blue-500">Security Systems</span> Provider
               </h2>
             </div>
             <p className="text-gray-400 text-lg">

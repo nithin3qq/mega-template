@@ -46,7 +46,7 @@ const App = () => {
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
-            <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+            <div className={`bg-gradient-to-b from-gray-900 to-black ${styles.paddingX} ${styles.flexStart}`}>
               <div className={`${styles.boxWidth}`}>
                 <Footer />
               </div>
