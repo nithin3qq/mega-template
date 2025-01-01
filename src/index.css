@@ -182,7 +182,6 @@
   animation: falls 0.5s ease forwards;
 }
 
-
 /* nithin */
 .site-title-tagline {
   text-transform: uppercase;
@@ -262,3 +261,53 @@ img {
   animation: spin 1s linear infinite;
 }
 
+/* cody */
+/* Enhanced shuffle animation */
+@keyframes shuffle-cards {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.shuffle-card {
+  animation: shuffle-cards 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced fall animation */
+@keyframes falls {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fall-animation {
+  animation: falls 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Enhanced button hover effects */
+.theme-btn:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Gradient overlay enhancement */
+.bg-gradient-overlay {
+  background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+}
