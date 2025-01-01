@@ -247,7 +247,7 @@ img {
 /* Add this to your global CSS file */
 .loader {
   border-color: transparent;
-  border-top-color: #6298f7; /* Change to your desired spinner color */
+  border-top-color: #5c84af; /* Change to your desired spinner color */
 }
 
 /* Optional: Customize the animation speed */
@@ -311,3 +311,5 @@ img {
 .bg-gradient-overlay {
   background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
 }
+
+

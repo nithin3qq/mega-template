@@ -120,7 +120,7 @@ const GetAQuote = () => {
             animate={{ opacity: 1, y: 0 }}
             className="lg:w-2/3"
           >
-            <form onSubmit={sendEmail} className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
+            <form onSubmit={sendEmail} className="">
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
               <h1 className="text-4xl font-bold text-white mb-8">
                 Request a Quote
@@ -214,7 +214,7 @@ const GetAQuote = () => {
             animate={{ opacity: 1, x: 0 }}
             className="lg:w-1/3"
           >
-            <div className="bg-blue-900 p-8 rounded-2xl shadow-xl">
+            <div className="bg-gradient-to-br from-blue-900/50 to-gray-900 p-8 rounded-2xl">
               <h2 className="text-3xl font-bold text-white mb-8">
                 Contact Information
               </h2>

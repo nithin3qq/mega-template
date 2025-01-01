@@ -48,9 +48,9 @@ const Navbar = () => {
             <span className="text-xl">Follow Us:</span>
             {[
               { icon: <FaFacebookF />, link: "https://www.facebook.com/share/7616CQHMkCnZoDJ1/" },
-              { icon: <FaTwitter />, link: "#" },
+              // { icon: <FaTwitter />, link: "#" },
               { icon: <FaInstagram />, link: "#" },
-              { icon: <FaLinkedinIn />, link: "#" },
+              // { icon: <FaLinkedinIn />, link: "#" },
             ].map((social, index) => (
               <a
                 key={index}

@@ -72,7 +72,7 @@ const Hero1 = () => {
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               {/* <div className="absolute inset-0 bg-gradient-to-r from-black via-black/0 to-transparent"></div> */}
-              <div className="absolute inset-0 bg-black opacity-50"></div>
+              <div className="absolute inset-0 bg-black opacity-60"></div>
               <div className="container mx-auto relative z-10">
                 <div className="flex items-center h-full">
                   <div className="w-full md:w-7/12 lg:w-7/12">
